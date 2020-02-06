@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,13 +8,13 @@
 <body>
 	<form action="" method="POST" style="text-align: center;">
 		<h1><center>BIO-DATA</center></h1>
-		Name: <input type="text" name="name1"><br>
-		Address: <textarea name="address1"></textarea><br>
-		Age: <input type="text" name="age1"><br>
-		Mobile: <input type="text" name="mobile1"><br>
-		Email: <input type="text" name="email1"><br>
-		Qalification: <input type="text" name="qalification1"><br>
-		<input type="submit" value="Display"><br>
+		<p>Name:</p> <input type="text" name="name1">
+		<p>Address:</p> <textarea name="address1"></textarea>
+		<p>Age:</p> <input type="text" name="age1">
+		<p>Mobile:</p> <input type="text" name="mobile1">
+		<p>Email:</p> <input type="text" name="email1">
+		<p>Qalification:</p> <input type="text" name="qalification1"><br>
+		<input type="submit" value="Display" style="margin-top: 20px;">
 	</form>
 </body>
 </html>

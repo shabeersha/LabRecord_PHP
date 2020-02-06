@@ -30,7 +30,10 @@ if($_POST){
 		while ($row=pg_fetch_row($result)) {
 			echo "<br>\n";
 			echo "<p style='text-align: center;'>";
-			echo "Rollno:$row[0] <br>Name:$row[1] <br>Mark:$row[2] <br>Grade:$row[3]";
+			echo "<br>Rollno:$row[0]
+			<br>Name:$row[1]
+			<br>Mark:$row[2]
+			<br>Grade:$row[3]";
 			echo "</p>";
 		}
 	}

@@ -55,19 +55,7 @@
 							$conv=1000;
 							$extra=500;
 							$gross=$hra+$conv+$extra+$basic;
-							if ($gross<=2000)
-							 	$intax=$gross;
-							elseif ($gross>2000&&$gross<4000)
-								$intax=($gross*3)/100;
-							elseif ($gross>4000&&$gross<5000)
-								$intax=($gross*5)/100;
-							elseif ($gross>5000)
-								$intax=($gross*8)/100;
-
-							$net=$gross-$intax;
-							echo "<b>Employee Name:</b>$ename<br>";
-							echo "<b>Designation:</b>$Designation<br>";
-							echo "<b>salary:</b>$net<br>";
+							display($gross,$ename,$Designation);
 							break;
 
 						case 'Supervisor':
@@ -75,19 +63,7 @@
 							$conv=750;
 							$extra=200;
 							$gross=$hra+$conv+$extra+$basic;
-							if ($gross<=2000)
-							 	$intax=$gross;
-							elseif ($gross>2000&&$gross<4000)
-								$intax=($gross*3)/100;
-							elseif ($gross>4000&&$gross<5000)
-								$intax=($gross*5)/100;
-							elseif ($gross>5000)
-								$intax=($gross*8)/100;
-
-							$net=$gross-$intax;
-							echo "<b>Employee Name:</b>$ename<br>";
-							echo "<b>Designation:</b>$Designation<br>";
-							echo "<b>salary:</b>$net<br>";
+							display($gross,$ename,$Designation);
 							break;
 
 						case 'Clerk':
@@ -95,19 +71,7 @@
 							$conv=500;
 							$extra=100;
 							$gross=$hra+$conv+$extra+$basic;
-							if ($gross<=2000)
-							 	$intax=$gross;
-							elseif ($gross>2000&&$gross<4000)
-								$intax=($gross*3)/100;
-							elseif ($gross>4000&&$gross<5000)
-								$intax=($gross*5)/100;
-							elseif ($gross>5000)
-								$intax=($gross*8)/100;
-
-							$net=$gross-$intax;
-							echo "<b>Employee Name:</b>$ename<br>";
-							echo "<b>Designation:</b>$Designation<br>";
-							echo "<b>salary:</b>$net<br>";
+							display($gross,$ename,$Designation);
 							break;
 
 						case 'Peon':
@@ -115,19 +79,7 @@
 							$conv=250;
 							$extra=0;
 							$gross=$hra+$conv+$extra+$basic;
-							if ($gross<=2000)
-							 	$intax=$gross;
-							elseif ($gross>2000&&$gross<4000)
-								$intax=($gross*3)/100;
-							elseif ($gross>4000&&$gross<5000)
-								$intax=($gross*5)/100;
-							elseif ($gross>5000)
-								$intax=($gross*8)/100;
-
-							$net=$gross-$intax;
-							echo "<b>Employee Name:</b>$ename<br>";
-							echo "<b>Designation:</b>$Designation<br>";
-							echo "<b>salary:</b>$net<br>";
+							display($gross,$ename,$Designation);
 							break;
 						
 						default:
@@ -137,5 +89,21 @@
 
 				} 	
 			}
+		}
+
+		function display($gross,$ename,$Designation){
+							if ($gross<=2000)
+							 	$intax=0;
+							elseif ($gross>2000&&$gross<4000)
+								$intax=($gross*3)/100;
+							elseif ($gross>4000&&$gross<5000)
+								$intax=($gross*5)/100;
+							elseif ($gross>5000)
+								$intax=($gross*8)/100;
+
+							$net=$gross-$intax;
+							echo "<b>Employee Name:</b>$ename<br>";
+							echo "<b>Designation:</b>$Designation<br>";
+							echo "<b>salary:</b>$net<br>";
 		}
 ?>
